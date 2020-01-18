@@ -9,7 +9,7 @@ const weather = (location, callback) => {
         } else if (body.code) {
             callback('Incorrect Data. Try again.', undefined)
         } else {
-            callback(undefined, body.currently.temperature)
+            callback(undefined, body.currently)
         }
     })
 }

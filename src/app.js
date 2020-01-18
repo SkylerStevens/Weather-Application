@@ -64,7 +64,8 @@ app.get('/weather', (req, res) => {
               return res.send({ error: error })
             } else {
               res.send({
-                temperature: data
+                temperature: data.temperature,
+                summary: data.summary
               })
             }
           })
